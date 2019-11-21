@@ -1,6 +1,6 @@
-FROM java:8
+FROM openjdk:11-jdk
 
-ENV CROWDIN_VERSION=2.0-20
+ENV CROWDIN_VERSION=2.0-31
 
 RUN apt-get update && \
     apt-get install -y apt-transport-https make git jq && \
