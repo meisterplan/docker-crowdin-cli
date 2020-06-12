@@ -1,6 +1,6 @@
 FROM openjdk:11-jdk
 
-ENV CROWDIN_VERSION=2.0-31
+ENV CROWDIN_VERSION=3.1-15
 
 RUN apt-get update && \
     apt-get install -y apt-transport-https make git jq && \
@@ -8,5 +8,5 @@ RUN apt-get update && \
 RUN wget -qO - https://artifacts.crowdin.com/repo/GPG-KEY-crowdin | apt-key add -
 RUN echo "deb https://artifacts.crowdin.com/repo/deb/ /" > /etc/apt/sources.list.d/crowdin.list
 RUN apt-get update && \
-    apt-get install -y crowdin=${CROWDIN_VERSION} && \
+    apt-get install -y crowdin3=${CROWDIN_VERSION} && \
     apt-get clean
