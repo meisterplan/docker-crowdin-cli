@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk
+FROM openjdk:17-jdk-bullseye
 
 ENV CROWDIN_VERSION=3.10-0
 
